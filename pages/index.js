@@ -1,19 +1,20 @@
 import Link from "next/link";
-import Navbar from "../comps/Navbar";
-import Footer from "../comps/Footer";
+import styles from "../styles/Home.module.css";
 export default function Home() {
 	return (
-		<div className=''>
-			<h1>Homepage</h1>
-			<p>
+		<div>
+			<h1 className={styles.title}>Homepage</h1>
+			<p className={styles.text}>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
 				hic? Obcaecati rem necessitatibus omnis cupiditate.
 			</p>
-			<p>
+			<p className={styles.text}>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
 				hic? Obcaecati rem necessitatibus omnis cupiditate.
 			</p>
-			<Link href='/ninjas'>See Ninja Listing</Link>
+			<Link href='/ninjas'>
+				<a className={styles.btn}>See Ninja Listing</a>
+			</Link>
 		</div>
 	);
 }
